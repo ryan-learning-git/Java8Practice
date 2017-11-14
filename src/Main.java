@@ -1,12 +1,21 @@
+import lessons.datetime.LocalDateTimeTest;
+import lessons.datetime.ZonedDateTimeTest;
 import lessons.foreach.ForEachMap;
 import lessons.lambda.LambdaTest;
 import lessons.lambda.comparatorexample.SortWithLambda;
 import lessons.lambda.comparatorexample.SortWithoutLambda;
+import lessons.methodreferences.MethodReferencesTest;
 import lessons.streams.filter.BeforeJava8;
 import lessons.streams.filter.FilterNull;
 import lessons.streams.filter.NowJava8;
+import lessons.streams.filter.streams.StreamsExtra;
 import lessons.streams.filter.streams.collectors.groupingby.GroupingByExample;
 import lessons.streams.filter.streams.reuse.ReUseStream;
+
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -77,6 +86,31 @@ public class Main {
         LambdaTest lambdaTest = new LambdaTest();
         lambdaTest.start();
 
+        separateSection();
+        System.out.println("Lesson 08: Method reference tests -- need more detail on this");
+        underline();
+        MethodReferencesTest methodReferencesTest = new MethodReferencesTest();
+        methodReferencesTest.start();
+
+        separateSection();
+        System.out.println("Lesson 09: Streams extra");
+        underline();
+        StreamsExtra streamsExtra = new StreamsExtra();
+        streamsExtra.start();
+
+        //it seems Optional is also a j8 thing.
+
+        separateSection();
+        System.out.println("Lesson 10: Dates");
+        underline();
+        separateSubSection();
+        System.out.println("Lesson 10.A - Local date/time");
+        LocalDateTimeTest localDateTimeTest = new LocalDateTimeTest();
+        localDateTimeTest.start();
+        separateSubSection();
+        System.out.println("Lesson 10.B - Zoned date/time");
+        ZonedDateTimeTest zonedDateTimeTest = new ZonedDateTimeTest();
+        zonedDateTimeTest.start();
 
     }//main
 
