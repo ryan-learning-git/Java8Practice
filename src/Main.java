@@ -1,9 +1,12 @@
 import lessons.foreach.ForEachMap;
+import lessons.lambda.LambdaTest;
 import lessons.lambda.comparatorexample.SortWithLambda;
 import lessons.lambda.comparatorexample.SortWithoutLambda;
 import lessons.streams.filter.BeforeJava8;
+import lessons.streams.filter.FilterNull;
 import lessons.streams.filter.NowJava8;
 import lessons.streams.filter.streams.collectors.groupingby.GroupingByExample;
+import lessons.streams.filter.streams.reuse.ReUseStream;
 
 public class Main {
 
@@ -49,6 +52,31 @@ public class Main {
         underline();
         GroupingByExample groupingByExample = new GroupingByExample();
         groupingByExample.start();
+
+        separateSection();
+        System.out.println("Lesson 05: Stream filter out null");
+        underline();
+        FilterNull filterNull = new FilterNull();
+        filterNull.start();
+
+        separateSection();
+        System.out.println("Lesson 06: Re-Use A Stream");
+        underline();
+        ReUseStream reUseStream = new ReUseStream();
+        reUseStream.start();
+
+        //lambda - http://www.dummies.com/programming/java/how-to-use-lambda-expressions-in-java-8/
+            //Basically we're implementing a Functional Interface (interface with 1 abstract function and the rest implemented)
+            //Lambda is a concise way to do this. Just define parameter types and method body - compiler interprets the rest
+            //based on context in which the lambda is used.
+            //Syntax is (parameters) -> expression OR (parameters) -> { statement; ... }
+
+        separateSection();
+        System.out.println("Lesson 07: Some Lambda tests");
+        underline();
+        LambdaTest lambdaTest = new LambdaTest();
+        lambdaTest.start();
+
 
     }//main
 
