@@ -112,6 +112,14 @@ public class Main {
         ZonedDateTimeTest zonedDateTimeTest = new ZonedDateTimeTest();
         zonedDateTimeTest.start();
 
+        List<String> myList =
+                Arrays.asList("a1", "a2", "b1", "c2", "c1");
+
+        System.out.println(myList.stream().filter(x -> !x.contains("c")).map(String::toUpperCase).collect(Collectors.toList()));
+
+        List<Integer> myInts = Arrays.asList(50, 100, 283, 938, 33, 1);
+        myInts.stream().mapToInt(x -> x).summaryStatistics().getMax();
+
     }//main
 
     private static void underline(){
