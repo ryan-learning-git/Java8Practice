@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * Never build based on a byte stream. It's primitive as fuck, but it's what everything else is based on. Character streams may make a bit more sense for stuff like the files listed.
+ */
 public class CopyBytes {
 
     public static void main(String[] args) throws IOException {
@@ -12,8 +15,8 @@ public class CopyBytes {
         FileOutputStream out = null;
 
         try {
-            in = new FileInputStream("xanadu.txt");
-            out = new FileOutputStream("outagain.txt");
+            in = new FileInputStream("output/iolesson/bootswiththefurrr.txt");
+            out = new FileOutputStream("output/iolesson/bootswiththefurrroutagain.txt");
 
             int c;
 
